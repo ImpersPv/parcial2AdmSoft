@@ -7,6 +7,7 @@ import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
 import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 import LoginComponent from './components/LoginComponent';
+import ListImcComponent from './components/ListImcComponent';
 
 //import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
@@ -20,6 +21,7 @@ function App() {
                     <Switch> 
                           <Route path = "/" exact component = {ListEmployeeComponent}></Route>
                           <Route path = "/employees" component = {ListEmployeeComponent}></Route>
+                          <Route path = "/add-imc/:id" component = {ListImcComponent}></Route>
                           <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
                           <Route path = "/login/:id" component = {LoginComponent}></Route>
                           <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import EmployeeService from '../services/EmployeeService'
+import ImcService from '../services/ImcService'
 
-class ListEmployeeComponent extends Component {
+class ListImcComponent extends Component {
     constructor(props) {
         super(props)
 
@@ -10,8 +10,6 @@ class ListEmployeeComponent extends Component {
         }
         this.addEmployee = this.addEmployee.bind(this);
         this.login = this.login.bind(this);
-        this.imc = this.imc.bind(this);
-
         this.cerrarSesion = this.cerrarSesion.bind(this);
 
         this.editEmployee = this.editEmployee.bind(this);
@@ -19,7 +17,7 @@ class ListEmployeeComponent extends Component {
     }
 
     deleteEmployee(id){
-        EmployeeService.deleteEmployee(id).then( res => {
+        ImcService.deleteEmployee(id).then( res => {
             this.setState({employees: this.state.employees.filter(employee => employee.id !== id)});
         });
     }
@@ -33,18 +31,15 @@ class ListEmployeeComponent extends Component {
     componentDidMount(){
         //localStorage.setItem('token', null);
 
-        EmployeeService.getEmployees().then((res) => {
-             console.log(res);
+        ImcService.getImcs().then((res) => {
+            console.log('imcs ');
+            console.log(res);
             this.setState({ employees: res.data.content});
         });
     }
 
     addEmployee(){
         this.props.history.push('/add-employee/_add');
-    }
-
-    imc(){
-        this.props.history.push('/add-imc/_add');
     }
 
     login(){
@@ -59,17 +54,9 @@ class ListEmployeeComponent extends Component {
     render() {
         return (
             <div>
-                 <h2 className="text-center">Estados List</h2>
+                 <h2 className="text-center">IMC demo (token)</h2>
                  
-                 <div className = "row">
-                    <button className="btn btn-primary" onClick={this.addEmployee}> Add Estado</button>
-                    <button className="btn btn-primary" onClick={this.imc}> Imc </button>
-                    <button className="btn btn-primary" onClick={this.login}> Login </button>
-
-                    <button className="btn btn-primary" onClick={this.cerrarSesion}> Cerrar Sesion </button>
-
-                 </div>
-
+                 
                  <br></br>
                  <div className = "row">
                         <table className = "table table-striped table-bordered">
@@ -77,8 +64,8 @@ class ListEmployeeComponent extends Component {
                             <thead>
                                 <tr>
                                     <th> ID </th>
-                                    <th> id Estado</th>
-                                    <th> Nombre </th>
+                                    <th> id usuario</th>
+                                    <th> imc </th>
                                     <th> Actions</th>
                                 </tr>
                             </thead>
@@ -88,8 +75,8 @@ class ListEmployeeComponent extends Component {
                                         employee => 
                                         <tr key = {employee.id}>
                                              <td> { employee.id} </td>   
-                                             <td> {employee.idestado}</td>
-                                             <td> {employee.estado}</td>
+                                             <td> {employee.iduser}</td>
+                                             <td> {employee.imc}</td>
                                              <td>
                                                  <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Update </button>
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete </button>
@@ -108,4 +95,4 @@ class ListEmployeeComponent extends Component {
     }
 }
 
-export default ListEmployeeComponent
+export default ListImcComponent
