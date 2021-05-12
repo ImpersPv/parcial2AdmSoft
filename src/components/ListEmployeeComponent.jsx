@@ -62,8 +62,10 @@ class ListEmployeeComponent extends Component {
                 <h1> </h1> 
                  <h2 className="text-center">Administrador</h2>
                  
-                 <div className = "text-right" >
-                    <button className="btn btn-info" onClick={this.addEmployee} > Agregar Usuario</button>
+                 <div className = "text-center" >
+                    <button className="btn btn-success" onClick={this.addEmployee} > Agregar Usuario</button>
+                    <button className="btn btn-info" onClick={this.imc}> Imc </button>
+                    <button className="btn btn-info" onClick={this.login}> Login </button>
                     <button className="btn btn-danger" onClick={this.cerrarSesion}> Cerrar Sesion </button>
                  </div>
                 
