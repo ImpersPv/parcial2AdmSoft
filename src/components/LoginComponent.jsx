@@ -41,7 +41,7 @@ class LoginComponent extends Component {
         if(this.state.id === '_add'){
             LoginService.signin(loginData).then(res =>{
                 console.log(res.data);
-                localStorage.setItem('token', res.data.accessToken);
+                sessionStorage.setItem('token', res.data.accessToken);
 
                 //console.log(res.data.accessToken);
                 

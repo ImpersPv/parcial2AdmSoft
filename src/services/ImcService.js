@@ -6,7 +6,7 @@ const IMC_API_BASE_URL = "http://localhost:8080/imcs";
 class ImcService {
 
     getImcs(){
-        var mytoken = localStorage.getItem('token') || '';
+        var mytoken = sessionStorage.getItem('token') || '';
 
         return axios.get(IMC_API_BASE_URL, {
             headers: {
