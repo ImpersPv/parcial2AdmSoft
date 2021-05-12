@@ -15,7 +15,7 @@ class HeaderComponent extends Component {
                 <header>
                     <nav class="navbar navbar-expand-lg">
                         <div class="container">
-                            <a class="navbar-brand text-white" href="#"><i class="fa fa-graduation-cap fa-lg mr-2"></i>ADMINISTRADOR DE PERFILES</a>
+                            <a class="navbar-brand text-white" href="/"><i class="fa fa-graduation-cap fa-lg mr-2"></i>ADMINISTRADOR DE PERFILES</a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
