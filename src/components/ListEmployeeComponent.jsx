@@ -58,17 +58,16 @@ class ListEmployeeComponent extends Component {
 
     render() {
         return (
-            <div>
-                 <h2 className="text-center">Estados List</h2>
+            <div>  
+                <h1> </h1> 
+                 <h2 className="text-center">Administrador</h2>
                  
-                 <div className = "row">
-                    <button className="btn btn-primary" onClick={this.addEmployee}> Add Estado</button>
-                    <button className="btn btn-primary" onClick={this.imc}> Imc </button>
-                    <button className="btn btn-primary" onClick={this.login}> Login </button>
-
-                    <button className="btn btn-primary" onClick={this.cerrarSesion}> Cerrar Sesion </button>
-
+                 <div className = "text-right" >
+                    <button className="btn btn-info" onClick={this.addEmployee} > Agregar Usuario</button>
+                    <button className="btn btn-danger" onClick={this.cerrarSesion}> Cerrar Sesion </button>
                  </div>
+                
+
 
                  <br></br>
                  <div className = "row">
@@ -77,9 +76,11 @@ class ListEmployeeComponent extends Component {
                             <thead>
                                 <tr>
                                     <th> ID </th>
-                                    <th> id Estado</th>
                                     <th> Nombre </th>
-                                    <th> Actions</th>
+                                    <th> E-mail </th>
+                                    <th> Dirección </th>
+                                    <th> Telefono </th>
+                                    <th> Acción </th>
                                 </tr>
                             </thead>
                             <tbody>
