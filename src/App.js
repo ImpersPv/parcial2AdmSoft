@@ -8,12 +8,23 @@ import FooterComponent from './components/FooterComponent';
 import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 import LoginComponent from './components/LoginComponent';
 import ListImcComponent from './components/ListImcComponent';
+import { Link } from 'react-router';
 
 //import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
 
 function App() {
   return (
+    <div className="App">
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+        Learn React
+      </a>
+    </div>>
     <div>
         <Router>
               <HeaderComponent />
