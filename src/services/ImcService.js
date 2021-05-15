@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-//const EMPLOYEE_API_BASE_URL = "http://35.223.20.167:8085/api/auth/estados";
+//localhost
 //const IMC_API_BASE_URL = "http://localhost:8080/imcs";
+//class server
+//const EMPLOYEE_API_BASE_URL = "http://35.232.232.192:8145/imcs";
+//personal server
 const IMC_API_BASE_URL = "http://34.122.12.31:8145/imcs";
 
 class ImcService {
