@@ -42,6 +42,7 @@ class LoginComponent extends Component {
             LoginService.signin(loginData).then(res =>{
                 console.log(res.data);
                 sessionStorage.setItem('token', res.data.accessToken);
+                this.props.history.push('/employees');
 
                 //console.log(res.data.accessToken);
                 

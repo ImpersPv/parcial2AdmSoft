@@ -26,15 +26,15 @@ class ViewEmployeeComponent extends Component {
                     <div className = "card-body">
                         <div className = "row">
                             <label> Employee First Name: </label>
-                            <div> { this.state.employee.firstName }</div>
+                            <div> { this.state.employee.name }</div>
                         </div>
                         <div className = "row">
                             <label> Employee Last Name: </label>
-                            <div> { this.state.employee.lastName }</div>
+                            <div> { this.state.employee.address }</div>
                         </div>
                         <div className = "row">
                             <label> Employee Email ID: </label>
-                            <div> { this.state.employee.emailId }</div>
+                            <div> { this.state.employee.phone }</div>
                         </div>
                     </div>
 

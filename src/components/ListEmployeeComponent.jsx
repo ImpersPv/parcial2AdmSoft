@@ -4,13 +4,18 @@ import EmployeeService from '../services/EmployeeService'
 class ListEmployeeComponent extends Component {
     constructor(props) {
         super(props)
-
+        console.log(props);
         this.state = {
                 employees: []
         }
         this.addEmployee = this.addEmployee.bind(this);
+        //BEGINNEW
+        this.editEmployee = this.editEmployee.bind(this);
+        this.deleteEmployee = this.deleteEmployee.bind(this);
+        //ENDNEW
         this.login = this.login.bind(this);
         this.imc = this.imc.bind(this);
+        this.email = this.email.bind(this);
 
         this.cerrarSesion = this.cerrarSesion.bind(this);
 
@@ -46,43 +51,49 @@ class ListEmployeeComponent extends Component {
     imc(){
         this.props.history.push('/add-imc/_add');
     }
+    /*
+    <Route path = "/" exact component = {ListEmployeeComponent}></Route>
+                          <Route path = "/employees" component = {ListEmployeeComponent}></Route>
+                          <Route path = "/add-imc/:id" component = {ListImcComponent}></Route>
+                          <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
+                          <Route path = "/login/:id" component = {LoginComponent}></Route>
+                          <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>
+                          <Route path = "/emails" component = {ListEmailComponent}></Route>*/
+
+    email(){
+        this.props.history.push('/emails');
+    }
 
     login(){
         this.props.history.push('/login/_add');
     }
 
     cerrarSesion(){
-        localStorage.setItem('token', null);
+        sessionStorage.setItem('token', null);
         alert('Sesion cerrada');
     }
 
     render() {
         return (
-            <div>  
-                <h1> </h1> 
-                 <h2 className="text-center">Administrador</h2>
-                 
+            <div>
+                 <h2 className="text-center">Employees List</h2>
                  <div className = "text-center" >
                     <button className="btn btn-success" onClick={this.addEmployee} > Agregar Usuario</button>
-                    <button className="btn btn-info" onClick={this.imc}> Imc </button>
+                    <button className="btn btn-info" onClick={this.imc}> Admins </button>
+                    <button className="btn btn-info" onClick={this.email}> Emails </button>
                     <button className="btn btn-info" onClick={this.login}> Login </button>
                     <button className="btn btn-danger" onClick={this.cerrarSesion}> Cerrar Sesion </button>
                  </div>
-                
-
-
                  <br></br>
                  <div className = "row">
                         <table className = "table table-striped table-bordered">
 
                             <thead>
                                 <tr>
-                                    <th> ID </th>
-                                    <th> Nombre </th>
-                                    <th> E-mail </th>
-                                    <th> Dirección </th>
-                                    <th> Telefono </th>
-                                    <th> Acción </th>
+                                    <th> Employee First Name</th>
+                                    <th> Employee Last Name</th>
+                                    <th> Employee Email Id</th>
+                                    <th> Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -90,9 +101,9 @@ class ListEmployeeComponent extends Component {
                                     this.state.employees.map(
                                         employee => 
                                         <tr key = {employee.id}>
-                                             <td> { employee.id} </td>   
-                                             <td> {employee.idestado}</td>
-                                             <td> {employee.estado}</td>
+                                             <td > { employee.name} </td>   
+                                             <td> {employee.address}</td>
+                                             <td> {employee.phone}</td>
                                              <td>
                                                  <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Update </button>
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete </button>

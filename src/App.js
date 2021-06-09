@@ -8,6 +8,7 @@ import FooterComponent from './components/FooterComponent';
 import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 import LoginComponent from './components/LoginComponent';
 import ListImcComponent from './components/ListImcComponent';
+import ListEmailComponent from './components/ListEmailComponent';
 
 //import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
@@ -25,6 +26,7 @@ function App() {
                           <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
                           <Route path = "/login/:id" component = {LoginComponent}></Route>
                           <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>
+                          <Route path = "/emails" component = {ListEmailComponent}></Route>
                           {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}
                     </Switch>
                 </div>

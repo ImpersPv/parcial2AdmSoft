@@ -75,8 +75,8 @@ class ListImcComponent extends Component {
                                         employee => 
                                         <tr key = {employee.id}>
                                              <td> { employee.id} </td>   
-                                             <td> {employee.iduser}</td>
-                                             <td> {employee.imc}</td>
+                                             <td> {employee.name}</td>
+                                             <td> {employee.username}</td>
                                              <td>
                                                  <button onClick={ () => this.editEmployee(employee.id)} className="btn btn-info">Update </button>
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.deleteEmployee(employee.id)} className="btn btn-danger">Delete </button>
