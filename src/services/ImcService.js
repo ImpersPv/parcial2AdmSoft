@@ -5,7 +5,7 @@ import axios from 'axios';
 //class server
 //const IMC_API_BASE_URL = "http://35.232.232.192:8145/imcs";
 //personal server
-const IMC_API_BASE_URL = "http://34.134.111.121:8145/users";
+const IMC_API_BASE_URL = "http://34.71.227.51:8145/users";
 
 class ImcService {
 

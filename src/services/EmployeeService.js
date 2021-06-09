@@ -6,7 +6,7 @@ import axios from 'axios';
 //const EMPLOYEE_API_BASE_URL = "http://35.232.232.192:8145/api/auth/estados";
 
 //personal server
-const EMPLOYEE_API_BASE_URL = "http://34.134.111.121:8145/api/auth/people";
+const EMPLOYEE_API_BASE_URL = "http://34.71.227.51:8145/api/auth/people";
 
 class EmployeeService {
 
