@@ -24,8 +24,8 @@ class ListEmailComponent extends Component {
         //localStorage.setItem('token', null);
 
         EmailService.getEmployees().then((res) => {
-             console.log(res.data.data.people.content);
-            this.setState({ employees: res.data.people.content});
+             console.log(res.people.content);
+            this.setState({ employees: res.people.content});
         });
     }
 
