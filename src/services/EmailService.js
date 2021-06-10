@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //localhost
-const EMAIL_API_BASE_URL = "http://localhost:8162/emails";
+const EMAIL_API_BASE_URL = "http://34.71.227.51:8162/emails";
 //class server
 //const EMPLOYEE_API_BASE_URL = "http://35.232.232.192:8145/api/auth/estados";
 
