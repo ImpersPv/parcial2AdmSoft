@@ -81,6 +81,7 @@ class ListEmployeeComponent extends Component {
                     <button className="btn btn-success" onClick={this.addEmployee} > Agregar Usuario</button>
                     <button className="btn btn-info" onClick={this.imc}> Admins </button>
                     <button className="btn btn-info" onClick={this.email}> Emails </button>
+                    <a href="http://34.71.227.51:8149/" class="btn btn-info" role="button">Sucursales</a>
                     <button className="btn btn-info" onClick={this.login}> Login </button>
                     <button className="btn btn-danger" onClick={this.cerrarSesion}> Cerrar Sesion </button>
                  </div>
